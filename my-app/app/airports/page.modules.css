@@ -1,0 +1,71 @@
+#header {
+    font-size: 40px;
+    color: greenyellow;
+    text-align: center;
+    font-weight: bold;
+}
+
+#hamadAirport {
+    filter: brightness(80%);
+}
+
+#incheonAirport {
+    filter: brightness(80%)
+}
+
+.airportName {
+    font-weight: bold;
+}
+
+.airportDescription {
+    font-size: 20px;
+}
+
+.carouselImage {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    width: 100%; /* Ensure the container takes full width */
+    height: 850px; /* Adjust height as needed */
+}
+
+html, body {
+    height:100%;
+    margin:0;
+    padding:0;
+    background-image: url("/images/sky.jpg");
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    }
+    .carousel, .item, .active {
+    height:100%;
+    }
+    .carousel-inner {
+    height:100%;
+    }
+    .carousel {
+    margin-bottom: 60px;
+    }
+    .carousel-caption {
+    z-index: 10;
+    }
+    .carousel .item {
+    background-color: #777;
+    }
+    .carousel .carousel-inner .bg {
+    background-repeat:no-repeat;
+    background-size:cover;
+    }
+    .carousel .carousel-inner .bg1 {
+    background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/158072/spiderweb.jpg');
+    background-position: center top;
+    }
+    .carousel .carousel-inner .bg2 {
+    background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/158072/hearthand.jpg');
+    background-position: center center;
+    }
+    .carousel .carousel-inner .bg3 {
+    background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/158072/woman-camera.jpg');
+    background-position: center bottom;
+    }
