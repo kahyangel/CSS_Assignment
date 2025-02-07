@@ -1,5 +1,5 @@
 export async function GET(request) {
-    return new Response.json ({
+    return Response.json ({
         "destination": [
             {
                 "japan": [
