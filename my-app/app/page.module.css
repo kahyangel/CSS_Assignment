@@ -1,0 +1,143 @@
+/* Container */
+.container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e7feff;
+    min-height: 100vh;
+  }
+  
+/* Header Section */
+.headerSection {
+    width: 100%;
+    height: 120px; 
+    background-color: #343a40; /* Solid color background for the top header */
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+
+/* Branding Header */
+.branding {
+  position: absolute;
+  top: 27px; /* Distance from the top */
+  left: 30px; /* Distance from the left */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white; /* Text color */
+  text-align: left;
+  z-index: 1000; /* Ensure it stays on top */
+  line-height: 1.5; /* Adjust spacing for multiline text */
+}
+
+/* Tagline Section */
+.tagline {
+  font-size: 55px ; /* Larger text for emphasis */
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin: 5px ;
+}
+
+/* Top Section */
+.topSection {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+  
+/* Left Section (Top Left) */
+.leftSection {
+    width: 845px;
+    height: 460px; 
+    background-color: white; /* Fallback color */
+    background-image: url('/images/bestairport.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-top: 20px;
+    margin-right: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white; /* Ensure text is visible over the background */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /*Push text to bottom*/
+    align-items: flex-start; /*Align text to left*/
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* Add shadow */
+  }
+  
+  /* Right Section (Top Right) */
+  .rightSection {
+    width: 845px;
+    height: 460px; 
+    background-color: white; /* Fallback color */
+    background-image: url('/images/clock.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    padding: 20px; 
+    margin-top: 20px;
+    margin-left: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white; /* Ensure text is visible over the background */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /*Push text to bottom*/
+    align-items: flex-start; /*Align text to left*/
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* Add shadow */
+  }
+  
+  .header {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .link {
+    display: inline-block;
+    font-size: 28px;
+    color: white;
+    text-decoration: none;
+    margin-top: 5px;
+    transition: color 0.2s ease;
+  }
+  
+  .link:hover {
+    color: #3b94f4;
+    text-decoration: underline;
+  }
+  
+/* Bottom Section */
+.bottomSection {
+    width: 90%;
+    height: 320px;
+    background-color: white; /* Fallback color */
+    background-image: url('/images/traveldeals.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white; /* Ensure text is visible over the background */
+    margin-top: 15px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /*Push text to bottom*/
+    align-items: flex-start; /*Align text to left*/
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* Add shadow */
+  }
