@@ -58,7 +58,7 @@
 
 /* Country Name */
 .countryName {
-  font-size: 1.5rem;
+  font-size: 1.5 rem;
   font-weight: bold;
   color: #4a90e2;
   margin-bottom: 10px;
@@ -66,7 +66,7 @@
 
 /* Result Item */
 .resultItem {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin: 5px 0;
   color: #333;
 }
@@ -84,4 +84,19 @@
   .select {
     font-size: 0.9rem;
   }
+}
+
+/* Add this CSS to page.module.css */
+.flag {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  transition: scale (1.07) ;
+}
+
+.flag:hover {
+  transform: scale(1.07) ;
 }
