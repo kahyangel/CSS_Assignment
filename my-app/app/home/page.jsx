@@ -1,13 +1,18 @@
-"use client";
 import styles from './page.module.css'
 
 export default function TravelPage() {
     return (
       <div className={styles.container}>
-        {/* Tagline Section */}
+        {/* Header Section */}
+      <div className={styles.headerSection}>
+        <div className={styles.branding}>
+          WORLD 🗺️⁀જ✈︎<br /> 🛫 TRAVELLER
+        </div>
+        
         <div className={styles.tagline}>
           Your Perfect Travel Guide!
         </div>
+      </div>
   
         {/* Top Section */}
         <div className={styles.topSection}>
@@ -32,4 +37,3 @@ export default function TravelPage() {
       </div>
     );
   }
-  

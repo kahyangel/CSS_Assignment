@@ -10,22 +10,50 @@
     min-height: 100vh;
   }
   
-  /* Tagline Section */
-  .tagline {
-    font-size: 60px ; /* Larger text for emphasis */
-    font-weight: bold;
+/* Header Section */
+.headerSection {
+    width: 100%;
+    height: 130px; 
+    background-color: #343a40; /* Solid color background for the top header */
+    padding: 20px 0;
+    color: white;
     text-align: center;
-    color: #0f52ba; /* Neutral dark color */
-    margin: 15px ; /* Space between navbar and tagline */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
-  /* Top Section */
-  .topSection {
-    display: flex;
-    width: 90%;
-    justify-content: space-between;
-    margin: 15px 0;
-  }
+
+
+/* Branding Header */
+.branding {
+  position: absolute;
+  top: 27px; /* Distance from the top */
+  left: 40px; /* Distance from the left */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white; /* Text color */
+  text-align: left;
+  z-index: 1000; /* Ensure it stays on top */
+  line-height: 1.5; /* Adjust spacing for multiline text */
+}
+
+/* Tagline Section */
+.tagline {
+  font-size: 60px ; /* Larger text for emphasis */
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin: 5px ;
+}
+
+/* Top Section */
+.topSection {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: 15px 0;
+}
   
 /* Left Section (Top Left) */
 .leftSection {
@@ -36,6 +64,7 @@
     background-size: cover;
     background-position: center;
     padding: 20px;
+    margin-right: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -56,6 +85,7 @@
     background-size: cover;
     background-position: center;
     padding: 20px; 
+    margin-left: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -101,6 +131,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: white; /* Ensure text is visible over the background */
+    margin-top: 15px;
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
