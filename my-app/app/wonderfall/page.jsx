@@ -38,6 +38,7 @@ export default function Page() {
           digital waterfall cascades among lush green walls to create a
           mesmerizing, calming spectacle.
         </p>
+        <p></p>
         <p className={styles.text}>
           Within The Wonderfall lies a melodic surprise – Rhythms of Nature, an
           abstract ballet of human design and Mother Nature's harmonious dance.
