@@ -4,6 +4,7 @@ const data = {
         title: "The Wonderfall",
         text: "An iconic landmark built with nature-inspired design and digital wizardry.",
         image: "/images/wonderfall.jpg",
+        link: "/wonderfall"
       },
       {
         title: "Kinetic Rain",

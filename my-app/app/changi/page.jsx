@@ -89,7 +89,7 @@ export default function App() {
                 <Card.Body>
                   <Card.Title id="card-title">{item.title}</Card.Title>
                   <Card.Text>{item.text}</Card.Text>
-                  <Button id="learn-button" variant="primary">Learn More</Button>
+                  <Button id="learn-button" variant="primary" onClick={() => router.push(item.link)}>Learn More</Button>
                 </Card.Body>
               </Card>
             ))}
