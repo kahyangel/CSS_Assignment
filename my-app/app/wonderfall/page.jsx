@@ -1,7 +1,18 @@
+"use client";
+
 import React from 'react';
 import styles from './page.module.css';
+import { useRouter } from 'next/navigation'; // Import useRouter hook from Next.js
+import { FaArrowLeft } from "react-icons/fa"; // Import the return arrow icon
 
 export default function WonderfallPage() {
+
+  const router = useRouter(); //Initialize router
+
+  const handleReturnClick = () => { // Use useRouter hook to return to the airports page
+    router.push('/changi');
+  };
+
   return (
     <div className={styles.container}>
       {/* Left Section: Image */}
@@ -12,6 +23,10 @@ export default function WonderfallPage() {
           className={styles.image}
         />
       </div>
+      <button id="return-button" onClick={handleReturnClick}>
+        <FaArrowLeft size={20} color="black" />
+        <b id="return">Back</b>
+      </button>
 
       {/* Right Section: Factual Statements */}
       <div className={styles.rightSection}>
