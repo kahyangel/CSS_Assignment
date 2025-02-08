@@ -167,9 +167,4 @@
     justify-content: flex-end; /*Push text to bottom*/
     align-items: flex-start; /*Align text to left*/
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* Add shadow */
-<<<<<<< HEAD
-  }
-
-=======
-  }
->>>>>>> b30d1070c0ace1cb385868e8f52b5d1309195e7c
+}
