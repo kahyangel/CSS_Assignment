@@ -2,7 +2,7 @@ export async function GET(request) {
     return Response.json ({
         "destination": [
             {
-                "japan": [
+                "Japan": [
                     {
                         "airline": "Japan Airlines",
                         "price": 653
@@ -17,7 +17,7 @@ export async function GET(request) {
                         "price": 637
                     }
                 ],
-                "korea": [
+                "Korea": [
                     {  
                         "airline": "Korean Air",
                         "price": 746
@@ -31,7 +31,7 @@ export async function GET(request) {
                         "price": 873
                     }
                 ],
-                "china": [
+                "China": [
                     {
                         "airline": "China Eastern Airlines",
                         "price": 836
