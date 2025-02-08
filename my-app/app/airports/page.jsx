@@ -1,8 +1,8 @@
 /*
-RootLayout Component (Kah Yan)
+Bootstrap Carousel Component (Kah Yan)
 -------------------------------------------------------------------------------------------------------------------------------
-Created a Carousel showcasing the top 3 airports in the world, using the imported Carousel component from Bootstrap.
-Used the useRouter hook to allow users to navigate the specified destination page when the Carousel image is pressed.
+1) Created a Carousel showcasing the top 3 airports in the world, using the imported Carousel component from Bootstrap.
+2) Used the useRouter hook to allow users to navigate the specified destination page when the Carousel image is pressed.
 -------------------------------------------------------------------------------------------------------------------------------
 */
 

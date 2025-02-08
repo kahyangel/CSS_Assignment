@@ -1,5 +1,5 @@
 /*
-Changi Component (Kah Yan)
+Bootstrap Dynamic Card & Buttons Component (Kah Yan)
 -------------------------------------------------------------------------------------------------------------------------------
 1) Created an introduction section that displays a welcome message, airport image, and a "Back" button for navigation to 
 the /airports page using Next.js' useRouter.
