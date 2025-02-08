@@ -26,12 +26,18 @@ import { FaSearch, FaBars } from "react-icons/fa";
 // Configuring the Inter font for consistent typography
 const inter = Inter({ subsets: ['latin'] })
 
+//Import hook
+import { usePathname } from "next/navigation";
+
 // RootLayout component: Defines the root layout structure of the application
 export default function RootLayout({ children }) {
+  const pathname = usePathname(); // Get the current route\
+
   return (
     <html lang="en">
       <body className={inter.className}>
       <>
+      {(pathname !== "/" && pathname !== "/home") && (
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
         <Navbar.Brand href="home" style={{ fontWeight: "bold", fontSize: "1.5rem" }}>
@@ -52,9 +58,10 @@ export default function RootLayout({ children }) {
           </div>
         </Container>
       </Navbar>
+      )}
     </>
     {children}</body>
     </html>
-  )
+  );
 }
 
