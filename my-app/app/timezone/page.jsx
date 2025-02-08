@@ -12,33 +12,36 @@ const App = () => {
 
   // Apply global styles dynamically
   useEffect(() => {
-    document.body.style.margin = '0';
-    document.body.style.fontFamily = "'Poppins', Arial, sans-serif";
-    document.body.style.background = ' #1e3c72';
-    document.body.style.color = '#fff';
+    Object.assign(document.body.style, {
+      margin: '0',
+      fontFamily: "'Poppins', Arial, sans-serif",
+      background: '#1e3c72',
+      color: '#fff',
+    });
 
-    return () => {
-      document.body.style.margin = '';
-      document.body.style.fontFamily = '';
-      document.body.style.background = '';
-      document.body.style.color = '';
-    };
+    return () => Object.assign(document.body.style, {
+      margin: '',
+      fontFamily: '',
+      background: '',
+      color: '',
+    });
   }, []);
 
-  // Fetch the list of countries on component mount
+  // Fetch countries list
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const response = await axios.get('https://restcountries.com/v3.1/all');
-        let countryList = response.data.map((country) => ({
-          name: country.name.common,
-          capital: country.capital ? country.capital[0] : null,
-          latlng: country.latlng,
-          flag: country.flags.svg,
-        }));
+        const { data } = await axios.get('https://restcountries.com/v3.1/all');
+        const sortedCountries = data
+          .map(({ name, capital, latlng, flags }) => ({
+            name: name.common,
+            capital: capital?.[0] || null,
+            latlng,
+            flag: flags?.svg || '',
+          }))
+          .sort((a, b) => a.name.localeCompare(b.name));
 
-        countryList = countryList.sort((a, b) => a.name.localeCompare(b.name));
-        setCountries(countryList);
+        setCountries(sortedCountries);
       } catch (error) {
         console.error('Error fetching countries:', error);
       }
@@ -50,25 +53,22 @@ const App = () => {
   useEffect(() => {
     const updateDateTime = () => {
       const now = new Date();
-      const formattedDate = now.toLocaleDateString(undefined, {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      });
-
-      const formattedTime = now.toLocaleTimeString(undefined, {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-      });
-
-      setCurrentDateTime(`${formattedDate} | ${formattedTime}`);
+      setCurrentDateTime(
+        `${now.toLocaleDateString(undefined, {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })} | ${now.toLocaleTimeString(undefined, {
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+        })}`
+      );
     };
 
     updateDateTime();
     const interval = setInterval(updateDateTime, 1000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -77,39 +77,32 @@ const App = () => {
     const countryName = e.target.value;
     setSelectedCountry(countryName);
 
-    const selectedCountryData = countries.find((country) => country.name === countryName);
-    if (selectedCountryData) {
-      setFlag(selectedCountryData.flag);
-      if (selectedCountryData.latlng) {
-        const [latitude, longitude] = selectedCountryData.latlng;
+    const countryData = countries.find((c) => c.name === countryName);
+    if (!countryData) return;
 
-        try {
-          const apiKey = 'Q5I3B2TPLTEZ'; // Replace with your TimeZoneDB API key
-          const response = await axios.get(
-            `http://api.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=position&lat=${latitude}&lng=${longitude}`
-          );
+    setFlag(countryData.flag);
+    if (!countryData.latlng) return setTimezone('N/A');
 
-          if (response.data.status === 'OK') {
-            setTimezone(response.data.zoneName);
-          } else {
-            setTimezone('N/A');
-          }
-        } catch (error) {
-          console.error('Error fetching timezone data:', error);
-          setTimezone('N/A');
-        }
-      } else {
-        setTimezone('N/A');
-      }
+    const [latitude, longitude] = countryData.latlng;
+    try {
+      const apiKey = 'Q5I3B2TPLTEZ'; 
+      const { data } = await axios.get(
+        `http://api.timezonedb.com/v2.1/get-time-zone?key=${apiKey}&format=json&by=position&lat=${latitude}&lng=${longitude}`
+      );
+
+      setTimezone(data.status === 'OK' ? data.zoneName : 'N/A');
+    } catch (error) {
+      console.error('Error fetching timezone:', error);
+      setTimezone('N/A');
     }
   };
 
   return (
-    <div style={{ background: '#1e3c72', minHeight: '100vh' }}>
+    <div className={styles.app}>
       <div className={styles.container}>
         <h1 className={styles.title}>🌍 Country Timezone Finder</h1>
-  
-        {/* Dropdown for selecting a country */}
+
+        {/* Country Dropdown */}
         <div className={styles.dropdownContainer}>
           <label htmlFor="country" className={styles.label}>
             Select a country:
@@ -128,8 +121,8 @@ const App = () => {
             ))}
           </select>
         </div>
-  
-        {/* Display the flag, timezone, and current date/time */}
+
+        {/* Display Country Info */}
         {selectedCountry && (
           <div className={styles.resultContainer}>
             <h2 className={styles.countryName}>{selectedCountry}</h2>
@@ -145,6 +138,6 @@ const App = () => {
       </div>
     </div>
   );
-};  
+};
 
 export default App;
