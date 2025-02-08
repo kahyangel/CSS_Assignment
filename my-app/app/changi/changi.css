@@ -1,0 +1,143 @@
+#title {
+    font-size: 50px;
+    color: whitesmoke;
+    font-weight: bold;
+    margin-left: 15px; /*Sets margin on the left*/
+}
+
+#header {
+    position: relative; /* Makes #header the reference point for absolute positioning */
+}
+
+#plane-icon {
+    font-size: 50px;
+    color: whitesmoke;
+    position: absolute; /* Position this element within #header */
+    top: 70px;
+    right: 35px;
+}
+
+#cloud-icon1 {
+    font-size: 100px;
+    color: rgba(245, 245, 245, 0.485);
+    position: relative; /* Position this element within #header */
+    left: 5px;
+}
+
+#cloud-icon2 {
+    font-size: 110px;
+    color: rgba(245, 245, 245, 0.495);
+    position: absolute; /* Position this element within #header */
+    bottom: -45px; /* Distance from the bottom */
+    right: 9px; /* Distance from the right */
+}
+
+#intro-container {
+    display: flex;
+    justify-content: center; /*Aligns the flex items in the container horizontally within the flex container. */
+    align-items: center; /*Aligns the flex items in the container vertically within the flex container. */
+}
+
+#comment {
+    color: seashell;
+    margin-left: 15px; /*Sets margin on the left*/
+}
+
+#returnButton {
+    position: absolute; /* Position relative to the #container container */
+    top: 115px; /* Distance from the top */
+    right: 15px; /* Distance from the left */
+    background-color: transparent; /* Remove any default background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    font-size: 24px; /* Icon size */
+    display: flex; /* Ensures proper alignment for content */
+    align-items: center; /* Align icon and text vertically */
+    gap: 8px; /* Space between icon and text */
+    text-decoration: none; /* Remove text underline (if any) */
+    color: black; /* Icon and text color */
+}
+
+.changi-body {
+    background-color: #1e3c72;
+    padding-bottom: 50px;
+}
+
+
+#tryHeader {
+    margin-top: 120px; /*Creates a space between the top and bottom sections of the page*/
+    font-weight: bold;
+    color: rgb(154, 201, 238);
+}
+
+#categories {
+    display: flex;
+    gap: 30px; /* Specify the gap between the buttons in the container */
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.category-btn {
+    width: 150px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 17px; /* Set font size for text */
+    border: 2px solid whitesmoke; /* Add border for styling */
+    border-radius: 35px; /* Rounded corners */
+    background-color: #1e3c72; /* Matching background colour */
+    color: whitesmoke; /* Light text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#card {
+    border-radius: 20px; /* Create rounded corners for the card */
+    border: 2px solid whitesmoke;
+    position: relative; /* Makes #card the reference point for absolute positioning */
+    height: 420px;
+    width: 220px;
+}
+
+#card-img {
+    border-radius: 20px; /* Create rounded corners for the card image */
+    height: 200px; /* Set a consistent height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+#card-title {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#card-container {
+    display: flex;
+    flex-direction: row; /*Layout cards along the x axis*/
+    gap: 100px; /* Specify the gap between the cards in the container */
+}
+
+#things-to-try-container {
+    display: grid; /* Used for designing a layout that requires both rows and columns*/
+    justify-content: center; /* Aligns the entire container horizontally within the container. */
+    position: relative; /* Makes #things-to-try-container the reference point for absolute positioning */
+}
+
+#cloud-icon3 {
+    font-size: 200px;
+    color: rgba(245, 245, 245, 0.412);
+    position: absolute; /* Position this element within #things-to-try */
+    top: 22px;
+    right: 15px;
+}
+
+#cloud-icon4 {
+    font-size: 120px;
+    color: rgba(245, 245, 245, 0.371);
+    position: absolute;
+    left: 40px;
+    top: 15px;
+}
+
+#learn-button {
+    bottom: 15px;
+    position: absolute; /* Position this element within #card */
+}

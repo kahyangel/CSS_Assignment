@@ -1,0 +1,72 @@
+#airport-header {
+    font-size: 50px;
+    color: #dfebee;
+    text-align: center;
+    font-weight: bold;
+}
+
+#airport-intro {
+    font-size: 20px;
+    color: rgb(154, 201, 238);
+    text-align: center;
+}
+
+#hamadAirport {
+    filter: brightness(80%); /* lower brightness of image*/
+}
+
+#incheonAirport {
+    filter: brightness(75%); /* lower brightness of image*/
+}
+
+.airportName {
+    font-weight: bold;
+    font-size: 33px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 4); /* Slight blur with dark shadow */
+}
+
+.airportDescription {
+    font-size: 18px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 7); /* Slight blur with dark shadow */
+}
+
+.carouselContainer {
+    display: flex;
+    justify-content: center; /* center the flex items (captions, img) horizontally within the carousel container */
+    width: 1320px; /* set a max width for the carousel container */
+    height: 750px; /* set a max height for the carousel container  */
+    margin: auto; /* automatically adjust the left and right margins to center the carousel container horizontally within the <body> element */
+    padding: 15px; /* remove the slight up-down movement of captions */
+    position: relative; /* needed for the output of rank */
+}
+
+
+.rank {
+    position: absolute; /* element is placed in a specific position within its closest parent element that has a position property set to something other than static (carousel container position: relative) */
+    z-index: 10; /* Sets the stacking order of the element. (elements with a higher z-index value will appear above those with a lower value) */
+    color: white;
+    padding: 15px 25px;
+    font-size: 60px;
+}
+
+.airport-body {
+    background-color: #1e3c72;
+    padding-bottom: 50px;
+}
+
+.carousel, .item, .active {
+    height:100%; /*Ensures that all images or content inside the carousel items scale properly to fill the height of the carousel. */
+}
+.carousel-inner {
+    height:100%; /*Ensures that all child elements of .carousel-inner (the carousel items) inherit the full height and stay aligned within the parent container. */
+    width:100%; /*Ensures that all child elements of .carousel-inner (the carousel items) inherit the full width and stay aligned within the parent container. */
+}
+
+.carousel-caption {
+    bottom: 4%; /* Keeps captions at a fixed position (prevent it from moving up and down during transition)*/
+}
+
+.carousel-item {
+    width: 1320px; /* Set a width for the carousel item that appears after transition*/
+    height: 750px; /* Set a width for the carousel item that appears after the transition*/
+}

@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #e7feff;
+    background-color: #1e3c72;
     min-height: 100vh;
   }
   
@@ -141,4 +141,4 @@
     justify-content: flex-end; /*Push text to bottom*/
     align-items: flex-start; /*Align text to left*/
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8); /* Add shadow */
-  }
+}

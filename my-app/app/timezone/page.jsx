@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     document.body.style.margin = '0';
     document.body.style.fontFamily = "'Poppins', Arial, sans-serif";
-    document.body.style.background = 'linear-gradient(to right, #1e3c72, #2a5298)';
+    document.body.style.background = ' #1e3c72';
     document.body.style.color = '#fff';
 
     return () => {
@@ -105,44 +105,46 @@ const App = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>🌍 Country Timezone Finder</h1>
-
-      {/* Dropdown for selecting a country */}
-      <div className={styles.dropdownContainer}>
-        <label htmlFor="country" className={styles.label}>
-          Select a country:
-        </label>
-        <select
-          id="country"
-          value={selectedCountry}
-          onChange={handleCountryChange}
-          className={styles.select}
-        >
-          <option value="">-- Select a country --</option>
-          {countries.map((country, index) => (
-            <option key={index} value={country.name}>
-              {country.name}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {/* Display the flag, timezone, and current date/time */}
-      {selectedCountry && (
-        <div className={styles.resultContainer}>
-          <h2 className={styles.countryName}>{selectedCountry}</h2>
-          {flag && <img src={flag} alt={`${selectedCountry} flag`} className={styles.flag} />}
-          <p className={styles.resultItem}>
-            <strong>Timezone:</strong> {timezone}
-          </p>
-          <p className={styles.resultItem}>
-            <strong>Current Date & Time:</strong> {currentDateTime}
-          </p>
+    <div style={{ background: '#1e3c72', minHeight: '100vh' }}>
+      <div className={styles.container}>
+        <h1 className={styles.title}>🌍 Country Timezone Finder</h1>
+  
+        {/* Dropdown for selecting a country */}
+        <div className={styles.dropdownContainer}>
+          <label htmlFor="country" className={styles.label}>
+            Select a country:
+          </label>
+          <select
+            id="country"
+            value={selectedCountry}
+            onChange={handleCountryChange}
+            className={styles.select}
+          >
+            <option value="">-- Select a country --</option>
+            {countries.map((country, index) => (
+              <option key={index} value={country.name}>
+                {country.name}
+              </option>
+            ))}
+          </select>
         </div>
-      )}
+  
+        {/* Display the flag, timezone, and current date/time */}
+        {selectedCountry && (
+          <div className={styles.resultContainer}>
+            <h2 className={styles.countryName}>{selectedCountry}</h2>
+            {flag && <img src={flag} alt={`${selectedCountry} flag`} className={styles.flag} />}
+            <p className={styles.resultItem}>
+              <strong>Timezone:</strong> {timezone}
+            </p>
+            <p className={styles.resultItem}>
+              <strong>Current Date & Time:</strong> {currentDateTime}
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
-};
+};  
 
 export default App;
