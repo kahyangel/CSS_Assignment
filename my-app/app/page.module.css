@@ -28,9 +28,9 @@
 /* Branding Header */
 .branding {
   position: absolute;
-  top: 27px; /* Distance from the top */
-  left: 30px; /* Distance from the left */
-  font-size: 1.2rem;
+  top: 13px; /* Distance from the top */
+  left: 50px; /* Distance from the left */
+  font-size: 2rem;
   font-weight: bold;
   color: white; /* Text color */
   text-align: left;
@@ -108,11 +108,12 @@
   
   .link {
     display: inline-block;
-    font-size: 28px;
+    font-size: 20px;
     color: white;
     text-decoration: none;
     margin-top: 5px;
     transition: color 0.2s ease;
+    text-decoration: underline;
   }
   
   .link:hover {
