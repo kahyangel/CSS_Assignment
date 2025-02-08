@@ -5,6 +5,11 @@
     align-items: stretch;
     height: 100vh;
     background-color: #f8f9fa; /* Light neutral background */
+    position: relative; /* Makes .container the reference point for absolute positioning */
+  }
+
+  #return-button {
+    position: absolute; /* Position this element within .container */
   }
   
   /* Left Section: Image */
