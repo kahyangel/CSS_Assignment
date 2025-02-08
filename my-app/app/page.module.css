@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #e7feff;
+    background-color: #1e3c72;
     min-height: 100vh;
   }
   
@@ -72,7 +72,7 @@
     z-index: 1000; /* Ensure it stays on top */
     line-height: 1.5; /* Adjust spacing for multiline text */
   }
-  
+
 /* Top Section */
 .topSection {
   display: flex;
