@@ -1,3 +1,16 @@
+/*
+Country Timezone Finder Component (Liew You Tong)
+-------------------------------------------------------------------------------------------------------------------------------
+1) Created a country timezone finder webpage that allows user to select a country from a dropdown list and retrieve its timezone. 
+2) Used two APIs, REST Countries API and TimezoneDB API (which requires API key,Q5I3B2TPLTEZ)
+3) Used Axios to fetch country data such as name, flag , capital and coordinates from REST Countries API
+4) Integrated TimeZoneDB API to determine the timezone based on the selected country's latitude and longtitude.
+5) Implemented real-time date and time updates using 'useEffect' 
+6) Applied dynamic global styles with a responsive design using CSS. 
+7) Ensured interactivity such as hover effects and styled dropdowns.
+-------------------------------------------------------------------------------------------------------------------------------
+*/
+
 'use client';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
