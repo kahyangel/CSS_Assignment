@@ -57,7 +57,7 @@ export default function App() {
             </select>
 
             {loading ? (
-                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "50vh" }}>
+                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "50vh", color: "white"}}>
                     <Spinner animation="border" role="status">
                         <span className="visually-hidden">Loading...</span>
                     </Spinner>
@@ -69,18 +69,18 @@ export default function App() {
                         <div className={styles.cheapest}>
                             <h3>Cheapest</h3>
                             <h3>Flight</h3>
-                            <p className="airline">{selectedFlights[0]?.airline}</p> 
-                            <p className="price">${selectedFlights[0]?.price}</p>
-                            <a className={styles.bookinglink} href="https://sg.trip.com/?locale=en-SG&curr=SGD" target="_blank" rel="noreferrer">
+                            <p className={styles.airline}><strong>{selectedFlights[0]?.airline}</strong></p> 
+                            <p className={styles.price}>${selectedFlights[0]?.price}</p>
+                            <a className={styles.bookinglink} href="https://sg.trip.com/?locale=en-SG&curr=SGD" target="_blank">
                                 Book Now
                             </a>
                         </div>
                         <div className={styles.expensive}>
                             <h3>Most Expensive</h3>
                             <h3>Flight</h3>
-                            <p className="airline">{selectedFlights[selectedFlights.length - 1]?.airline}</p>
-                            <p className="price">${selectedFlights[selectedFlights.length - 1]?.price}</p>
-                            <a className={styles.bookinglink} href="https://sg.trip.com/?locale=en-SG&curr=SGD" target="_blank" rel="noreferrer">
+                            <p className={styles.airline}><strong>{selectedFlights[selectedFlights.length - 1]?.airline}</strong></p>
+                            <p className={styles.price}>${selectedFlights[selectedFlights.length - 1]?.price}</p>
+                            <a className={styles.bookinglink} href="https://sg.trip.com/?locale=en-SG&curr=SGD" target="_blank">
                                 Book Now
                             </a>
                         </div>
