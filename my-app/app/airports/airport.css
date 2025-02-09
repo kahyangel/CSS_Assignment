@@ -52,6 +52,7 @@
 .airport-body {
     background-color: #1e3c72;
     padding-bottom: 50px;
+    padding-top: 20px;
 }
 
 .carousel, .item, .active {
