@@ -8,7 +8,7 @@
   position: relative; /* Needed for absolute positioning inside */
 }
 
-/* Return Button - Moves When Scrolling */
+/* Return Button*/
 .returnButton {
   position: absolute; /* Moves with the page */
   top: 15px;         /* Distance from the top of .container */

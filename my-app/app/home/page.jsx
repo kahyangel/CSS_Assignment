@@ -1,3 +1,20 @@
+/*
+Homepage (Kwoh Si Jia)
+------------------------------------------------------------
+1) Designed and implemented a structured three-section layout to organize the main features of the website
+
+2) Implemented three main content sections:  
+   - "World’s Best Airports" → Allows users to explore top-rated airports.  
+   - "World Clock" → Provides time zone information to help travelers manage jet lag.  
+   - "Compare Prices" → Directs users to search for the best flight and travel deals.
+
+3) All catch phrases of each section redirects user to the specific page (e.g. Discover the world's best airports -> airports page)
+
+4) Implemented link hover effects to improve user interaction and accessibility:  
+   - On hover, the link color changes to #3b94f4 (blue).  
+   - An underline effect is applied to indicate interactivity.  
+------------------------------------------------------------
+*/
 "use client";
 
 import React from "react";

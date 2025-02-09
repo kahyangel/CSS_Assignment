@@ -1,3 +1,17 @@
+/*
+Wonderfall at Changi Page (Kwoh Si Jia)  
+------------------------------------------------------------------------------------------------------------  
+1) Designed a dedicated informational page about the Wonderfall attraction at Changi Airport’s Terminal 2, which is     linked from the changi page's learn more more button, providing users with engaging visuals and descriptive content.  
+
+2) Implemented a fixed back button at the top right corner, allowing users to return to the `/changi` page seamlessly.  
+   - Used Next.js useRouter to handle client-side navigation (`router.push("/changi")`).  
+   - Integrated FaArrowLeft from `react-icons` to enhance the button’s UI with a recognizable back arrow.  
+
+3) Created a two-column layout:  
+   - Left Section: Displays a high-quality image of the Wonderfall (`wonderfall2.jpg`).  
+   - Right Section: Provides textual information about the attraction, formatted for readability. 
+------------------------------------------------------------------------------------------------------------ 
+ */
 "use client";
 
 import React from "react";

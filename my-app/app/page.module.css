@@ -14,7 +14,7 @@
 .headerSection {
     width: 100%;
     height: 120px; 
-    background-color: #343a40; /* Solid color background for the top header */
+    background-color: #343a40; 
     padding: 20px 0;
     color: white;
     text-align: center;
@@ -60,7 +60,7 @@
     width: 845px;
     height: 460px; 
     background-color: white; /* Fallback color */
-    background-image: url('/images/bestairport.jpg'); /* Replace with your image path */
+    background-image: url('/images/bestairport.jpg');
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -82,7 +82,7 @@
     width: 845px;
     height: 460px; 
     background-color: white; /* Fallback color */
-    background-image: url('/images/clock.jpg'); /* Replace with your image path */
+    background-image: url('/images/clock.jpg');
     background-size: cover;
     background-position: center;
     padding: 20px; 
@@ -126,7 +126,7 @@
     width: 90%;
     height: 320px;
     background-color: white; /* Fallback color */
-    background-image: url('/images/traveldeals.jpg'); /* Replace with your image path */
+    background-image: url('/images/traveldeals.jpg'); 
     background-size: cover;
     background-position: center;
     padding: 20px;
