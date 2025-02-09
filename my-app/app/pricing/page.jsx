@@ -1,3 +1,13 @@
+/*
+Pricing Page -- Done by Ong Jun Shu, Camellia
+-----------------------------------------------------------
+1) Made an interactive page that allows users to compare flight prices to different destinations.
+2) Implemented useEffect and useState hooks to fetch and store flight data, as well as input data from user.
+3) Created a dropdown menu for users to select a destination.
+4) Imported "spinner" from react-bootstrap to show loading state when fetching data.
+-----------------------------------------------------------
+*/
+
 "use client";
 import Spinner from "react-bootstrap/Spinner";
 import { useEffect, useState } from "react";
@@ -56,13 +66,14 @@ export default function App() {
                 <option value="China">China</option>
             </select>
 
-            {loading ? (
+            {loading ? ( // If loading is true, show spinner
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "50vh", color: "white"}}>
                     <Spinner animation="border" role="status">
                         <span className="visually-hidden">Loading...</span>
                     </Spinner>
                 </div>
-            ) : selectedValue && selectedFlights.length > 0 ? (
+            ) : ( // Else, show the flights
+                selectedValue && selectedFlights.length > 0 &&  // If selectedValue is not empty and selectedFlights has data
                 <div>
                     <h2 className={styles.ftitle}>Flights to {selectedValue}</h2>
                     <div className={styles.flights}>
@@ -86,8 +97,6 @@ export default function App() {
                         </div>
                     </div>
                 </div>
-            ) : (
-                selectedValue && <p className={styles.unavail}>No flights available for {selectedValue}</p>
             )}
         </div>
     );
