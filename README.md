@@ -11,3 +11,5 @@ This website is designed to provide a comprehensive overview of the airline indu
 - **Airline Price Comparison**: A page that compares flight prices across different airline companies, helping users make informed decisions about their travel plans.
   
 - **Home Page Navigation**: A central homepage that allows users to easily navigate to different sections of the website through interactive buttons.
+
+The website is built with HTML, CSS, and JavaScript, ensuring a smooth user experience, responsive design, and interactive functionality.
